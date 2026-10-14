@@ -1,0 +1,28 @@
+{
+  "format": "avsim-studio/1",
+  "params": {},
+  "policy": {},
+  "hazards": [
+    {
+      "type": "bike",
+      "x": 40.0,
+      "lane": "E2",
+      "d": 1.2,
+      "v": 5.0,
+      "swerve": 3.8,
+      "swDur": 2.8,
+      "t0": 0.0,
+      "trig": 20.0
+    }
+  ],
+  "ego": "planner",
+  "space": {
+    "h0_x": [40.0, 90.0],
+    "h0_v": [4.5, 6.0],
+    "h0_swerve": [3.6, 4.0],
+    "h0_swDur": [2.7, 3.3],
+    "h0_trig": [18.0, 30.0]
+  },
+  "exposure": 0.005,
+  "why": "Xe đạp tránh chướng ngại mặt đường và chuyển làn: Bronuela-Ambrocio et al. (2025), doi:10.11175/easts.16.PP4133, bảng 5–6 quan sát 12/954 và 21/1124 xe đạp chuyển làn khi đi qua các vị trí có hư hỏng mặt đường, gộp là 33/2078 ≈ 1.59% trên mỗi lượt qua vị trí được khảo sát; nghiên cứu chọn sẵn các vị trí có hư hỏng, không đo tần suất trên mọi chuyến ô tô. Giả định sàng lọc cho tuyến mô phỏng: 0.3 lượt gặp xe đạp ở vị trí hư hỏng/chuyến × 33/2078 ≈ 0.0048, làm tròn exposure thành 0.005/chuyến. Hệ số 0.3 chưa được đo, nên mọi tần suất/chuyến chỉ là phân tích nhạy cảm, cần video hành trình địa phương để hiệu chỉnh. E1/E2 cách nhau 3.5 m trong avsim: swerve 3.6–4.0 m là khoảng đủ cắt sang làn ego, không phải biên độ đo trong nghiên cứu; swDur 2.7–3.3 s giữ gia tốc ngang đỉnh pi^2*swerve/(2*swDur^2) <= 3 m/s^2. x=40–90 m và trig=18–30 m đặt sự kiện khi ego đang tiếp cận, không phải phân phối thực nghiệm."
+}
